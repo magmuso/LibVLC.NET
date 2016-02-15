@@ -29,12 +29,12 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyVersion("0.15.0.1")]
+[assembly: AssemblyVersion("0.16.0.0")]
 
 [assembly: AssemblyTitle("LibVLC.NET")]
 [assembly: AssemblyDescription(".NET bindings to LibVLC")]
-[assembly: AssemblyCompany("Boris Richter")]
+[assembly: AssemblyCompany("Martynas Melninkas, Boris Richter")]
 [assembly: AssemblyProduct("LibVLC.NET")]
-[assembly: AssemblyCopyright("Copyright (C) 2011 Boris Richter")]
+[assembly: AssemblyCopyright("Copyright (C) 2016 Martynas Melninkas, 2011 Boris Richter")]
 [assembly: ComVisible(false)]
 [assembly: Guid("6e2eff7b-e4bd-4145-89a0-223f73cd79fd")]
