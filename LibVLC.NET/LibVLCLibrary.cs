@@ -208,6 +208,8 @@ namespace LibVLC.NET
             m_libvlc_media_player_get_chapter_count = (libvlc_media_player_get_chapter_count_signature)LoadDelegate<libvlc_media_player_get_chapter_count_signature>("libvlc_media_player_get_chapter_count");
             m_libvlc_media_player_previous_chapter = (libvlc_media_player_previous_chapter_signature)LoadDelegate<libvlc_media_player_previous_chapter_signature>("libvlc_media_player_previous_chapter");
             m_libvlc_media_player_next_chapter = (libvlc_media_player_next_chapter_signature)LoadDelegate<libvlc_media_player_next_chapter_signature>("libvlc_media_player_next_chapter");
+            m_libvlc_media_player_get_rate = (libvlc_media_player_get_rate_signature)LoadDelegate<libvlc_media_player_get_rate_signature>("libvlc_media_player_get_rate");
+            m_libvlc_media_player_set_rate = (libvlc_media_player_set_rate_signature)LoadDelegate<libvlc_media_player_set_rate_signature>("libvlc_media_player_set_rate");
             m_libvlc_media_player_get_state = (libvlc_media_player_get_state_signature)LoadDelegate<libvlc_media_player_get_state_signature>("libvlc_media_player_get_state");
             m_libvlc_media_player_get_fps = (libvlc_media_player_get_fps_signature)LoadDelegate<libvlc_media_player_get_fps_signature>("libvlc_media_player_get_fps");
             m_libvlc_media_player_is_seekable = (libvlc_media_player_is_seekable_signature)LoadDelegate<libvlc_media_player_is_seekable_signature>("libvlc_media_player_is_seekable");

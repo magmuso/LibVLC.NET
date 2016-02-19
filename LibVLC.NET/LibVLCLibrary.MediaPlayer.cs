@@ -516,7 +516,7 @@ namespace LibVLC.NET
 
     //==========================================================================
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    private delegate int libvlc_media_player_next_chapter_signature(IntPtr p_mi);
+    private delegate void libvlc_media_player_next_chapter_signature(IntPtr p_mi);
 
     //==========================================================================
     private readonly libvlc_media_player_next_chapter_signature m_libvlc_media_player_next_chapter;
@@ -530,13 +530,40 @@ namespace LibVLC.NET
     }
 
 
-    /*
-  float libvlc_media_player_get_rate (libvlc_media_player_t *p_mi)
-  int libvlc_media_player_set_rate (libvlc_media_player_t *p_mi, float rate)
-*/
+    //==========================================================================
+    // float libvlc_media_player_get_rate (libvlc_media_player_t *p_mi)
+
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    private delegate float libvlc_media_player_get_rate_signature(IntPtr p_mi);
 
     //==========================================================================
-    // libvlc_state_t libvlc_media_player_get_state (libvlc_media_player_t *p_mi)
+    private readonly libvlc_media_player_get_rate_signature m_libvlc_media_player_get_rate;
+
+    //==========================================================================
+    public float libvlc_media_player_get_rate(IntPtr p_mi)
+    {
+        VerifyAccess();
+
+        return m_libvlc_media_player_get_rate(p_mi);
+    }
+
+    //==========================================================================
+    // int libvlc_media_player_set_rate (libvlc_media_player_t *p_mi, float rate)
+
+
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    private delegate int libvlc_media_player_set_rate_signature(IntPtr p_mi, float rate);
+
+    //==========================================================================
+    private readonly libvlc_media_player_set_rate_signature m_libvlc_media_player_set_rate;
+
+    //==========================================================================
+    public int libvlc_media_player_set_rate(IntPtr p_mi, float rate)
+    {
+        VerifyAccess();
+
+        return m_libvlc_media_player_set_rate(p_mi, rate);
+    }
 
     //==========================================================================
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]

@@ -133,7 +133,7 @@ namespace LibVLC.NET
 
     //==========================================================================
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    private delegate IntPtr libvlc_media_new_location_signature(IntPtr p_instance, string psz_mrl);
+    private delegate IntPtr libvlc_media_new_location_signature(IntPtr p_instance, char[] psz_mrl);
 
     //==========================================================================
     private readonly libvlc_media_new_location_signature m_libvlc_media_new_location;
@@ -141,9 +141,12 @@ namespace LibVLC.NET
     //==========================================================================
     public IntPtr libvlc_media_new_location(IntPtr p_instance, string psz_mrl)
     {
-      VerifyAccess();
+        VerifyAccess();
 
-      return m_libvlc_media_new_location(p_instance, psz_mrl);
+        char[] str = new char[psz_mrl.Length];
+        str = psz_mrl.ToCharArray();
+
+        return m_libvlc_media_new_location(p_instance, str);
     }
 
     //==========================================================================
@@ -389,6 +392,7 @@ namespace LibVLC.NET
 
       return result;
     }
+
 
   } // class LibVLCLibrary
 
